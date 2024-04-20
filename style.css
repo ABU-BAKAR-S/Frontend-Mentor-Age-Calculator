@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap");
+* {
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+:root {
+  --primaryPurple: hsl(259, 100%, 65%);
+  --primaryLightRed: hsl(0, 100%, 67%);
+  --white: hsl(0, 0%, 100%);
+  --offWhite: hsl(0, 0%, 94%);
+  --lightGrey: hsl(0, 0%, 86%);
+  --smokeyGrey: hsl(0, 1%, 44%);
+  --offBlack: hsl(0, 0%, 8%);
+}
+body {
+  background: var(--offWhite);
+  font-family: "Poppins", sans-serif;
+}
+.container {
+  width: 300px;
+  background-color: var(--white);
+  margin: 50px auto;
+  border-radius: 20px 20px 200px 20px;
+  padding: 10px;
+}
+.upper-content {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.upper-content .upper-div {
+  display: flex;
+  flex-direction: column;
+  margin: 0 5px;
+}
+small {
+  font-size: 13px;
+  color: var(--smokeyGrey);
+  letter-spacing: 3px;
+  margin-bottom: 8px;
+}
+input {
+  outline: none;
+  border: 1px solid var(--lightGrey);
+  width: 80px;
+  height: 60px;
+  font-size: 20px;
+  border-radius: 8px;
+  font-weight: 700;
+  padding-left: 5px;
+}
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+  appearance: none;
+}
+.upper-div input::placeholder {
+  padding-left: 5px;
+  font-weight: 700;
+}
+input:focus {
+  border-color: var(--primaryPurple);
+}
+.upper-div span {
+  padding-top: 8px;
+  font-size: 12px;
+  font-weight: 400;
+  font-style: italic;
+}
+.hr-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5px;
+}
+.hr-img hr {
+  margin-top: 50px;
+  outline: none;
+  border: none;
+  width: 100%;
+  height: 1px;
+  background: var(--lightGrey);
+  text-align: center;
+  position: relative;
+}
+.hr-img img {
+  padding: 10px;
+  border-radius: 50%;
+  background: var(--primaryPurple);
+  position: absolute;
+  margin: 40px auto 0;
+  cursor: pointer;
+  transition: all 0.5s;
+  z-index: 1;
+}
+.hr-img img:hover {
+  background: var(--offBlack);
+}
+.show-age {
+  display: block;
+  padding-top: -10px;
+}
+.show-age h1 {
+  font-size: 40px;
+  font-weight: 800;
+  font-style: italic;
+}
+.show-age h1 span {
+  color: var(--primaryPurple);
+}
+.txtColor {
+  color: var(--primaryLightRed);
+}
+
+.borderColor {
+  border-color: var(--primaryLightRed);
+}
+
+/* media query for mobile 375px */
+@media screen and (min-width: 375px) {
+  .container {
+    width: 340px;
+    padding: 20px;
+  }
+  input {
+    width: 90px;
+  }
+}
+
+/* media query for mobile 425px */
+@media screen and (min-width: 425px) {
+  .container {
+    width: 380px;
+    padding: 25px;
+  }
+  small {
+    font-size: 15px;
+  }
+  input {
+    width: 100px;
+  }
+}
+
+/* media query for mobile 768px */
+@media screen and (min-width: 768px) {
+  .container {
+    width: 600px;
+    padding: 35px;
+  }
+  .upper-content .upper-div {
+    margin: 0 20px;
+  }
+  small {
+    font-size: 15px;
+  }
+  input {
+    width: 120px;
+    font-size: 32px;
+    padding-left: 10px;
+  }
+  .hr-img {
+    justify-content: flex-end;
+  }
+  .hr-img hr {
+    width: 90%;
+  }
+  .show-age h1 {
+    font-size: 55px;
+    padding: 0 35px;
+  }
+}
+
+/* media query for large devices */
+@media screen and (min-width: 1024px) {
+  body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .container {
+    margin: 0;
+  }
+}
